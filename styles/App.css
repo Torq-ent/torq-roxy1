@@ -1,0 +1,370 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+/* Home screen styles */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Comic Neue', cursive;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.home-title {
+  font-size: 4em;
+  margin: 0.2em 0;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.home-description {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  animation: fadeIn 2s ease-in-out;
+  font-style: italic;
+  text-shadow: 2px 2px #ff0000;
+}
+
+.home-subtitle {
+  font-size: 1.2em;
+  margin: 1em 0;
+  animation: fadeIn 3s ease-in-out;
+  line-height: 1.5;
+  text-shadow: 1px 1px #00f;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #ff0;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 2px 2px #000;
+}
+
+.play-button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  color: #ff7e5f;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+  font-family: 'Comic Neue', cursive;
+  animation: wobble 2s infinite;
+}
+
+.play-button:hover {
+  background: #feb47b;
+  transform: scale(1.1);
+}
+
+/* Game screen styles */
+.game-container {
+  text-align: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 120px;
+}
+
+.score-container h1 {
+  margin: 0;
+  font-size: 5em; /* Increased font size for score */
+  color: #fff; /* Ensure the score text is visible */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for better contrast */
+  line-height: 1.2;
+}
+
+.score-container .highscore {
+  text-align: right;
+  font-size: 2.5em; /* Slightly smaller font size for highscore */
+  color: #FFD700;
+  padding: 40px 20px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  background: #fff;
+  color: #ff7e5f;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button-group button:hover {
+  background: #feb47b;
+  transform: scale(1.1);
+}
+
+/* Influencer card styles */
+.influencer-container {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Ensure it covers the full viewport height */
+  position: relative;
+  overflow: hidden;
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+.influencer-card-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%; /* Ensure it fills the parent container */
+}
+
+.influencer-card {
+  width: 100%;
+  height: 100%; /* Ensure it covers the entire container */
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center; /* Center the image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Optional: If you want to make sure there is no gap or margin */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+.influencer-card.right.slide-left {
+  transform: translateX(-100%);
+}
+
+.influencer-card.left {
+  transform: translateX(0);
+}
+
+.influencer-info {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.influencer-info h2,
+.influencer-info p {
+  margin: 5px 0;
+}
+
+.small-text {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.platform-logo {
+  width: 40px;
+  height: 40px;
+  margin: 10px auto 0 auto; /* Centered directly below the name */
+  border-radius: 50%;
+  display: block; /* Ensures it's centered under the name */
+}
+
+.vs-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: background 0.3s ease;
+}
+
+.vs-circle.correct {
+  background: green;
+}
+
+.vs-circle.incorrect {
+  background: red;
+}
+
+.vs-text {
+  font-size: 24px;
+  color: black;
+  margin: 0;
+}
+
+.follower-count {
+  font-size: 60px;
+  color: #FFD700;
+  margin-top: 5px;
+}
+
+.guess-button {
+  padding: 15px 30px;
+  margin: 8px 0;
+  cursor: pointer;
+  background: transparent;
+  border: 2.5px solid #FFD700;
+  color: #FFD700;
+  font-size: 22px;
+  border-radius: 30px;
+  position: relative;
+}
+
+.guess-button::after {
+  content: '▲';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+}
+
+.guess-button.lower::after {
+  content: '▼';
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.source-link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+.score {
+  font-size: 4em; /* Increased font size for the main score */
+  transition: color 0.3s ease;
+  color: #fff; /* Ensure the score text is visible */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for better contrast */
+}
+
+.score.animate {
+  animation: pulse 1s infinite;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-25%);
+  }
+  30% {
+    transform: translateX(20%);
+  }
+  45% {
+    transform: translateX(-15%);
+  }
+  60% {
+    transform: translateX(10%);
+  }
+  75% {
+    transform: translateX(-5%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Highscore overlay styles */
+.highscore-overlay {
+  position: absolute;
+  top: 1px; /* Move it a bit higher */
+  right: 10px;
+  font-size: 2.5em; /* Reduced font size for highscore */
+  color: #FFD700;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1000;
+}

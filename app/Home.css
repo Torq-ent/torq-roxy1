@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'); /* Importing a modern, clean font */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc); /* Cooler gradient with purple and blue tones */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Clean, modern font family */
+}
+
+.home-title {
+  font-size: 3.5em;
+  margin: 0.5em 0;
+  animation: fadeIn 1.5s ease-in-out; /* Subtle fade-in animation */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Softer shadow for depth */
+}
+
+.home-description {
+  font-size: 1.4em;
+  margin: 0.5em 0;
+  animation: fadeIn 2.5s ease-in-out;
+  font-style: italic; /* Italic text */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Softer shadow for readability */
+}
+
+.home-subtitle {
+  font-size: 1.1em;
+  margin: 1em 0;
+  animation: fadeIn 3s ease-in-out;
+  line-height: 1.6; /* Slightly increased line height */
+  color: #ffeb3b; /* A gold-like color for highlights */
+}
+
+.highlight {
+  font-weight: bold;
+  color: #ffeb3b; /* Gold highlight color */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for highlights */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Softer shadow for highlights */
+}
+
+.play-button {
+  padding: 12px 28px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  background: #ffeb3b; /* Gold button background */
+  color: #6a11cb; /* Purple text color for contrast */
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif; /* Consistent font family */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  animation: scaleUp 2s infinite; /* Subtle scaling animation */
+}
+
+.play-button:hover {
+  background: #ffc107; /* Slightly darker gold on hover */
+  transform: scale(1.05); /* Slight scaling on hover */
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+  
